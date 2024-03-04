@@ -10,7 +10,7 @@ import { ITokenResponse } from 'src/app/models/ITokenResponse';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss']
 })
-export class LoginComponent implements OnInit{
+export class LoginComponent{
 
   loginForm: FormGroup;
 
@@ -27,12 +27,6 @@ export class LoginComponent implements OnInit{
       ],
     })
   }
-  ngOnInit(): void {
-    let tokenExists = this.cookieService.check('AuthToken');
-
-  }
-
-  //Validators.pattern('^(?=.*[0-9])(?=.*[a-zA-Z])([a-zA-Z0-9]+)$'),
 
   loginUser() {
     this.authService.LoginUser(this.loginForm.value).subscribe((response: ITokenResponse) => {

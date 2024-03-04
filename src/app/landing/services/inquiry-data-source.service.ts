@@ -29,9 +29,4 @@ export class InquiryDataSourceService extends DataSource<IInquiry>{
     });
     this.isLoading$.next(false);
   }
-
-  sort(){
-
-  }
-
 }

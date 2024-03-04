@@ -27,20 +27,6 @@ export class RegisterComponent {
     });
   };
 
-  get form() {
-    return this.registrationForm.controls;
-  }
-
-  get formName() {
-    return this.registrationForm.get('Name');
-  }
-  get formPassword() {
-    return this.registrationForm.get('Password');
-  }
-  get formRepeatPassword() {
-    return this.registrationForm.get('RepeatPassword');
-  }
-
   registerUser() {
     this.authService.RegisterUser(this.registrationForm.value).subscribe(result => {
       this.snackBar.open('Your account was created successfully', '', {

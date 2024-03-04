@@ -36,7 +36,7 @@
         <mat-error *ngIf="registrationForm.get('RepeatPassword')?.errors?.['required']">
           Field shouldn't be empty
         </mat-error>
-        <mat-error *ngIf="registrationForm.get('RepeatPassword') !== registrationForm.get('Password')">
+        <mat-error *ngIf="registrationForm.get('RepeatPassword')?.value !== registrationForm.get('Password')?.value">
           Passwords should match
         </mat-error>
       </mat-form-field>
