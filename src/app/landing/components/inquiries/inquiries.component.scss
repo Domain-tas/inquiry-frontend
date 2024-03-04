@@ -1,0 +1,20 @@
+.inquiries-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 50px;
+}
+
+.new-inquiry-button {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.inquiries-table-container {
+  width: 800px;
+  max-width: 1000px;
+}
+
+.inquiries-table {
+  border-radius: 10px;
+}

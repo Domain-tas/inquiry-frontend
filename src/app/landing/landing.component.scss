@@ -1,0 +1,35 @@
+.main-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-header {
+  height: 50px;
+  background-color: #3f51b5;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo-container {
+  color: #FFFFFF;
+  font-family: 'Oswald';
+  font-size: xx-large;
+  font-weight: bold;
+  padding-left: 50px;
+  width: 50%;
+}
+
+.logo {
+  width: 100%;
+}
+
+.logout-container {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.logout-container button {
+  margin-right: 50px;
+}

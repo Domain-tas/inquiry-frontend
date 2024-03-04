@@ -1,0 +1,25 @@
+<div class="inquiry-container">
+  <h2 class="inquiry-title">Create an inquiry</h2>
+  <form [formGroup]="inquiryForm" class="inquiry-form">
+
+    <mat-form-field class="form-field">
+      <mat-label>Enter your inquiry</mat-label>
+      <textarea matInput placeholder="" formControlName="Body"></textarea>
+    </mat-form-field>
+
+    <mat-form-field class="form-field">
+      <mat-label>Inquiry type</mat-label>
+      <mat-select formControlName="Type">
+        <div *ngFor="let item of inquiryTypes; index as i;">
+          <mat-option [value]="i">{{item}}</mat-option>
+        </div>
+      </mat-select>
+    </mat-form-field>
+
+    <div class="form-actions">
+      <button mat-flat-button color="accent" (click)="closeForm()">Close</button>
+      <button mat-flat-button color="primary" (click)="sendForm()">Send</button>
+    </div>
+
+  </form>
+</div>
